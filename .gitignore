@@ -1,0 +1,3 @@
+packages/cli/test/*
+**/node_modules/
+**/dist/

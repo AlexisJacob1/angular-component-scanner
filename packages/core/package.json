@@ -1,0 +1,22 @@
+{
+	"name": "@sincro/angular-component-scanner-core",
+	"version": "0.1.0",
+	"description": "Extract static definitions of Angular components and modules using ts-morph",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"author": "sincro-solutions",
+	"scripts": {
+		"build": "tsup --tsconfig tsconfig.build.json",
+		"build:dev": "tsup --tsconfig tsconfig.build.json --watch"
+	},
+	"dependencies": {
+		"ts-morph": "^20.0.0",
+		"typescript": "^5.3.0"
+	},
+	"devDependencies": {
+		"@types/node": "^20.0.0",
+		"tsup": "^8.5.1"
+	},
+	"license": "MIT",
+	"private": true
+}
