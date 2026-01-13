@@ -1,4 +1,5 @@
 import typescript from "@rollup/plugin-typescript";
+import del from 'rollup-plugin-delete';
 
 export default [
 	// Main library
@@ -9,16 +10,21 @@ export default [
 			format: "esm",
 			sourcemap: true,
 		},
-		plugins: [typescript({ tsconfig: "./tsconfig.build.json" })],
+		plugins: [
+			del({ targets: "dist/*" }),
+			typescript({ tsconfig: "./tsconfig.build.json" }),
+		],
 	},
 	// Worker bundle
 	{
 		input: "src/worker.ts",
 		output: {
 			file: "dist/worker.js",
-			format: "iife", // standalone worker
+			format: "esm", // standalone worker
 			sourcemap: true,
 		},
-		plugins: [typescript({ tsconfig: "./tsconfig.build.json" })],
+		plugins: [
+			typescript({ tsconfig: "./tsconfig.build.json" }),
+		],
 	},
 ];
