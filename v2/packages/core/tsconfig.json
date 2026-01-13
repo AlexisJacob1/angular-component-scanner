@@ -1,0 +1,21 @@
+{
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"target": "ES2020",
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"lib": [
+			"ES2020",
+			"WebWorker"
+		],
+		"declaration": true,
+		"declarationDir": "types",
+		"outDir": "dist",
+		"strict": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true
+	},
+	"include": [
+		"src"
+	]
+}
